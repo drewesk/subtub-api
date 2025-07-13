@@ -13,23 +13,26 @@ export const adminGetAllSubs = async (req, res, next) => {
   }
 };
 
-// export const adminGetUserSubs = async (req, res, next) => {
-//     try {
-//         const userSubs = await User.findById(req.params.id).select('-password');
+export const adminGetUserSubs = async (req, res, next) => {
+    try {
+        const subscription = await Subscription.findById(req.params.id).populate('user', '-password');
 
-//         if (!user) {
-//             const error = new Error('User not found');
-//             error.statusCode = 404;
-//             throw error;
-//         }
-//         res.status(200).json({
-//             success: true, 
-//             data: user
-//         });
-//     } catch (error) {
-//         next(error);
-//     }
-// }
+        if (!subscription) {
+            return res.status(404).json({ 
+                success: false, 
+                message: 'Subscription not found' 
+            });
+        }
+
+        res.status(200).json({ 
+            success: true, 
+            data: subscription 
+        });
+
+    } catch (error) {
+        next(error);
+    }
+}
 
 export const createSubscription = async (req, res, next) => {
     try {

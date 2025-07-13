@@ -5,13 +5,13 @@ import { Router } from "express";
 import authorize from "../middlewares/auth.middleware.js";
 import adminAuth from "../middlewares/admin.middleware.js";
 
-import { adminGetAllSubs, createSubscription, getUserSubscriptions } from "../controllers/subscription.controller.js";
+import { adminGetAllSubs, adminGetUserSubs, createSubscription, getUserSubscriptions } from "../controllers/subscription.controller.js";
 
 const subscriptionRouter = Router();
 
 subscriptionRouter.get('/admin', adminAuth, adminGetAllSubs);
 
-// subscriptionRouter.get('/:id', adminAuth, );
+subscriptionRouter.get('/admin/:id', adminAuth, adminGetUserSubs );
 
 subscriptionRouter.post('/', authorize, createSubscription);
 
