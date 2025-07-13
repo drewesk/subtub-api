@@ -9,7 +9,7 @@ import { adminGetAllSubs, createSubscription, getUserSubscriptions } from "../co
 
 const subscriptionRouter = Router();
 
-subscriptionRouter.get('/', adminAuth, adminGetAllSubs);
+subscriptionRouter.get('/admin', adminAuth, adminGetAllSubs);
 
 // subscriptionRouter.get('/:id', adminAuth, );
 

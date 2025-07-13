@@ -1,17 +1,17 @@
 import Subscription from '../models/subscription.model.js'
 
 export const adminGetAllSubs = async (req, res, next) => {
-    try {
-        const subscriptionList = //not sure yet
+  try {
+    const subscriptionList = await Subscription.find().populate('user', '-password');
 
-        res.status(200).json({
-            success: true, 
-            data: subscriptionList
-        });
-    } catch (error) {
-        next(error);
-    }
-}
+    res.status(200).json({
+      success: true,
+      data: subscriptionList,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 
 // export const adminGetUserSubs = async (req, res, next) => {
 //     try {
