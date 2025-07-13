@@ -12,6 +12,7 @@ export const {
     JWT_SECRET, 
     JWT_EXPIRES_IN,
     ARCJET_ENV,
-    ARCJET_KEY
+    ARCJET_KEY,
+    ADMIN_TOKEN
 // eslint-disable-next-line no-undef
 } = process.env;

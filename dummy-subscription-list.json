@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Chess Master Monthly",
+    "price": 14.99,
+    "currency": "USD",
+    "frequency": "monthly",
+    "category": "chess",
+    "paymentMethod": "Credit Card",
+    "status": "active",
+    "startDate": "2025-06-12T00:00:00.000Z",
+    "renewalDate": "2025-07-12T00:00:00.000Z",
+    "user": "64a9f13b6a1f9c3e5d2b1a7f"
+  },
+  {
+    "name": "Pro Sports Package",
+    "price": 29.99,
+    "currency": "USD",
+    "frequency": "yearly",
+    "category": "sports",
+    "paymentMethod": "PayPal",
+    "status": "active",
+    "startDate": "2024-07-01T00:00:00.000Z",
+    "renewalDate": "2025-07-01T00:00:00.000Z",
+    "user": "64fbc71e9d9b7a2e3f1a4c8b"
+  },
+  {
+    "name": "Finance Insights Weekly",
+    "price": 9.99,
+    "currency": "USD",
+    "frequency": "weekly",
+    "category": "finance",
+    "paymentMethod": "Credit Card",
+    "status": "active",
+    "startDate": "2025-07-03T00:00:00.000Z",
+    "renewalDate": "2025-07-10T00:00:00.000Z",
+    "user": "64cb31f29b1a43d2e6f9b712"
+  },
+  {
+    "name": "Tech Guru Daily",
+    "price": 4.99,
+    "currency": "USD",
+    "frequency": "daily",
+    "category": "technology",
+    "paymentMethod": "Credit Card",
+    "status": "active",
+    "startDate": "2025-07-12T00:00:00.000Z",
+    "renewalDate": "2025-07-13T00:00:00.000Z",
+    "user": "64df92b8fe31d95c2b7e6a3a"
+  },
+  {
+    "name": "Racing Enthusiast",
+    "price": 19.99,
+    "currency": "USD",
+    "frequency": "monthly",
+    "category": "racing",
+    "paymentMethod": "Credit Card",
+    "status": "active",
+    "startDate": "2025-06-15T00:00:00.000Z",
+    "renewalDate": "2025-07-15T00:00:00.000Z",
+    "user": "64be2395c7d4a1f9e3b8c601"
+  },
+  {
+    "name": "Other Special Subscription",
+    "price": 12.5,
+    "currency": "USD",
+    "frequency": "monthly",
+    "category": "other",
+    "paymentMethod": "Bank Transfer",
+    "status": "active",
+    "startDate": "2025-06-20T00:00:00.000Z",
+    "renewalDate": "2025-07-20T00:00:00.000Z",
+    "user": "64ce45fa9e1c3d78a6b2f103"
+  }
+]
