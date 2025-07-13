@@ -6,7 +6,7 @@ const subscriptionScema = new mongoose.Schema({
         required: [true, 'Subscription name is required'],
         trim: true,
         minLength: 2,
-        maxLength: 15
+        maxLength: 50
     },
     price: {
         type: Number,
@@ -24,7 +24,7 @@ const subscriptionScema = new mongoose.Schema({
     },
     category: {
         type: String,
-        enum: ['Chess', 'Sports', 'Finance', 'Technology', 'other'],
+        enum: ['chess', 'sports', 'finance', 'technology', 'other', 'racing'],
         required: true
     },
     paymentMethod: {

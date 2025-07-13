@@ -1,6 +1,8 @@
 //useful guide for REST API naming conventions and best practices, https://medium.com/@nadinCodeHat/rest-api-naming-conventions-and-best-practices-1c4e781eb6a5
 
 import { Router } from "express";
+import authorize from "../middlewares/auth.middleware.js";
+import { createSubscription } from "../controllers/subscription.controller.js";
 
 const subscriptionRouter = Router();
 
@@ -12,9 +14,7 @@ subscriptionRouter.get('/:id', (req, res) => res.send({
     title: 'GET subscription details'
 }));
 
-subscriptionRouter.post('/', (req, res) => res.send({
-    title: 'CREATE subscription'
-}));
+subscriptionRouter.post('/', authorize, createSubscription);
 
 subscriptionRouter.put('/:id', (req, res) => res.send({
     title: 'UPDATE subscription'
