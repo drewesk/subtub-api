@@ -64,7 +64,7 @@ const subscriptionScema = new mongoose.Schema({
 }, { timestamps: true });
 
 subscriptionScema.pre('save', function (next) {
-    if(this.renewalDate) {
+    if(!this.renewalDate) {
         const renewalPeriods = {
             daily: 1,
             weekly: 7,
