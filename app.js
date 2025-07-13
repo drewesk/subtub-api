@@ -13,6 +13,7 @@ import cookieParser from 'cookie-parser';
 import AJMiddleware from './middlewares/arcjet.middleware.js';
 
 //just to bypass arcjet in dev envirionment
+// REMOVE WHEN DEPLOYING TO PROD
 import { ADMIN_TOKEN } from './config/env.js'; 
 
 
@@ -25,6 +26,7 @@ app.use(cookieParser()); // reads cookies from user data/store data from incomin
 
 // app.use(AJMiddleware);
 // bypass for Admin testing in dev
+// CHANGE WHEN DEPLOYING TO PROD
 if (!ADMIN_TOKEN) {
   app.use(AJMiddleware);
 }
