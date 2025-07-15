@@ -13,6 +13,9 @@ export const {
     JWT_EXPIRES_IN,
     ARCJET_ENV,
     ARCJET_KEY,
-    ADMIN_TOKEN
+    ADMIN_TOKEN,
+    QSTASH_TOKEN,
+    QSTASH_URL,
+    
 // eslint-disable-next-line no-undef
 } = process.env;
