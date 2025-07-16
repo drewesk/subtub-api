@@ -6,3 +6,6 @@ export const workflowClient = new WorkflowClient({
     baseUrl: QSTASH_URL,
     token: QSTASH_TOKEN
 });
+
+console.log('QStash Client URL:', QSTASH_URL);
+console.log('QStash Client Token:', QSTASH_TOKEN);
