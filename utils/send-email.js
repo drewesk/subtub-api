@@ -1,3 +1,4 @@
+// BORROWED FROM TUTORIAL REPO with permission from JS MASTERY, ADRIAN (forgot his last name)
 import { emailTemplates } from './email-template.js'
 import dayjs from 'dayjs'
 import transporter, { accountEmail } from '../config/nodemailer.js'
