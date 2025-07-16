@@ -1,10 +1,7 @@
-import dayjs from 'dayjs';
-
+import dayjs from 'dayjs'
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-//written with vanilla JS so avoiding importing directly
-const { serve } require('@upstash/workflow/express'); 
-
+const { serve } = require("@upstash/workflow/express");
 import Subscription from '../models/subscription.model.js';
 
 const REMINDERS = [7, 5, 2, 1]; //day increments of reminders
