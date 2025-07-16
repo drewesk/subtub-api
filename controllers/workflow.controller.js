@@ -1,4 +1,7 @@
 import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc.js';
+dayjs.extend(utc);
+
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const { serve } = require('@upstash/workflow/express');
@@ -19,6 +22,12 @@ export const sendReminders = serve(async (context) => {
     return;
   }
 
+//Test a nodemailer reminder by forcing active value on new Subscription
+//   if (!subscription) {
+//     console.log(`🚫 Subscription not found for ID ${subscriptionId}`);
+//     return;
+//     }
+
   const renewalDate = dayjs(subscription.renewalDate);
 
   if (renewalDate.isBefore(dayjs())) {
@@ -38,7 +47,7 @@ export const sendReminders = serve(async (context) => {
       return; // crucial: stop until QStash resumes
     }
 
-    if (dayjs().isSame(reminderDate, 'day')) {
+if (dayjs().utc().startOf('day').isSame(reminderDate.utc().startOf('day'))) {
       console.log(`📬 It's time! Triggering ${label}`);
       await triggerReminder(context, label, subscription);
     } else {

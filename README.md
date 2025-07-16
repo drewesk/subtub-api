@@ -16,6 +16,12 @@ A lightweight subscription-tracking API built with **Express.js**, featuring CRU
 
 ---
 
+### 📬 Example Email Reminder
+
+![SubTub Email Reminder](./assets/email-preview.png)
+
+---
+
 ## 🔐 Admin Authorization
 
 Includes a scoped `ADMIN_TOKEN` environment variable and middleware to guard sensitive routes — enabling elevated admin privileges beyond standard user auth.
